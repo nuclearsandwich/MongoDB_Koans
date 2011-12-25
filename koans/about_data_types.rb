@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'mongo'
-require 'edgecase'
+require './edgecase'
 require 'date'
 
 class AboutDataTypes < EdgeCase::Koan
@@ -51,7 +50,7 @@ class AboutDataTypes < EdgeCase::Koan
   end
   def test_nil
     @col.insert({:value => nil})
-    assert_instance_of___, @col.find_one['value']
+    assert_instance_of ___, @col.find_one['value']
   end
   def test_not_attribute
     @col.insert({:value => true})

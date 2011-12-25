@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'mongo'
-require 'edgecase'
+require './edgecase'
 
 class AboutQueryOptions < EdgeCase::Koan
   include Mongo

@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'mongo'
-require 'edgecase'
+require './edgecase'
 
 # Make sure you start up mongod first :)
 

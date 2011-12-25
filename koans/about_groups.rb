@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'mongo'
-require 'edgecase'
+require './edgecase'
 
 class AboutGroups < EdgeCase::Koan
   include Mongo

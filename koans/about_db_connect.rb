@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'mongo'
-require 'edgecase'
+require './edgecase'
 
 class AboutDBConnect < EdgeCase::Koan
   include Mongo
@@ -17,13 +16,13 @@ class AboutDBConnect < EdgeCase::Koan
   end
   
   def test_connection
-    assert_nil @mongo, "MongoDB is not connected"
-    assert_instance_of Mongo::Collection, @mongo
+    assert @mongo, "MongoDB is not connected"
+    assert_instance_of Mongo::Connection, @mongo
   end
   
   def test_database_exist
-    assert !@db, "DB not available"
-    assert_instance_of ___, @db
+    assert @db, "DB not available"
+    assert_instance_of Mongo::DB, @db
   end
 
 end
